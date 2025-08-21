@@ -1,0 +1,128 @@
+.popular-categories {
+  width: 100%;
+  padding: 40px 20px;
+  /* background-color: #7c3c3c; */
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+.popular-header {
+  margin-bottom: 30px;
+}
+.popular-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: black;
+}
+.popular-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: black;
+
+}
+
+/* ✅ Horizontal Scroll */
+.categories-grid {
+  max-width: 1200px;          /* keeps content centered */
+  margin: 0 auto;             /* centers grid */
+  padding: 20px;
+  display: flex;              /* align items in row */
+  gap: 20px;
+  overflow-x: auto;           /* horizontal scroll */
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;    /* smooth scrolling */
+  scrollbar-width: thin;      /* Firefox */
+}
+.categories-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.categories-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* ✅ Card Style */
+.category-card {
+  flex: 0 0 250px;            /* fixed width card for scrolling */
+  background: rgba(109, 106, 106, 0.1);
+  padding: 15px;
+  border: 2px solid rgba(54, 219, 89, 0.8);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  color: black;
+  
+}
+.category-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: #fff;
+  color: #333;
+}
+
+/* Image Wrapper */
+.img-wrapper {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.category-card:hover .category-img {
+  transform: scale(1.1);
+}
+
+/* Text inside cards */
+.category-card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0 5px;
+}
+.category-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .popular-header h1 {
+    font-size: 2.2rem;
+  }
+  .category-card {
+    flex: 0 0 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-header h1 {
+    font-size: 2rem;
+  }
+  .popular-header p {
+    font-size: 1rem;
+  }
+  .category-card {
+    flex: 0 0 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-header h1 {
+    font-size: 1.5rem;
+  }
+  .popular-header p {
+    font-size: 0.9rem;
+  }
+  .category-card {
+    flex: 0 0 180px;
+  }
+  .category-card h2 {
+    font-size: 1rem;
+  }
+  .category-card p {
+    font-size: 0.8rem;
+  }
+}
