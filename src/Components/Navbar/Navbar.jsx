@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
 
       {/* Auth Buttons */}
       <div className="auth-section">
-        <button className="login-btn">Login</button>
+        <button onClick={()=>setShowLogin(true)} className="login-btn">Login</button>
         <button className="signup-btn">Sign Up</button>
       </div>
 

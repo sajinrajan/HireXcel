@@ -43,12 +43,15 @@
 }
 .login-btn,
 .signup-btn {
-  padding: 6px 14px;
-  border-radius: 4px;
+  padding: 0.7rem;
+  background: rgba(54, 219, 89, 0.8);
   border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1 rem;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
 }
 
 .login-btn {
