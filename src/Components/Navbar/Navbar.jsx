@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import logo from '../../assets/assets/logo HireXel.png'
 
 const Navbar = ({setShowLogin}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,7 @@ const Navbar = ({setShowLogin}) => {
     <div className="navbar">
       {/* Logo Section */}
       <div className="logo-section">
-        <h1>
-          hire<span className="logo-span">X</span>el
-        </h1>
+        <img src={logo} alt="logo" />
       </div>
 
       {/* Navigation Links */}
@@ -23,7 +22,7 @@ const Navbar = ({setShowLogin}) => {
       {/* Auth Buttons */}
       <div className="auth-section">
         <button onClick={()=>setShowLogin(true)} className="login-btn">Login</button>
-        <button className="signup-btn">Sign Up</button>
+        {/* <button className="signup-btn">Sign Up</button> */}
       </div>
 
       {/* Hamburger Menu */}

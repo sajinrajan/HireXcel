@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import logo from '../../assets/assets/logo HireXel.png'
 
 const Footer = () => {
   return (
@@ -13,6 +14,9 @@ const Footer = () => {
             FSDJOB helps people find jobs faster and smarter. 
             Connecting talent with opportunities worldwide.
           </p>
+          <div className="logo-section">
+            <img src={logo} alt="" />
+          </div>
         </div>
 
         {/* Second section */}

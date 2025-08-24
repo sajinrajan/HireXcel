@@ -19,7 +19,19 @@
   flex: 1;
   min-width: 220px;
 }
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
 
+.logo-section img {
+  height: 150px;   /* ✅ fits desktop navbar */
+  width: auto;
+  max-width: 100%; /* prevents overflow */
+  filter: brightness(1) invert(0); /* makes dark logos white */
+}
 .footer-section h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -76,6 +88,11 @@
 }
 
 /* 📱 Mobile responsive */
+@media (max-width: 1024px) {
+  .logo-section img {
+    height: 145px;
+  }
+}
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -84,5 +101,10 @@
 
   .social-icons {
     justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .logo-section img {
+    height: 90px;
   }
 }
