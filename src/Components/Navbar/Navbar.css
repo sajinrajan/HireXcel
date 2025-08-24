@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: #2e2d2d;
+  background-color: #1fa968;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,16 +12,25 @@
   z-index: 100;
 }
 
-/* Logo */
-.logo-section img {
-  height: 150px;   /* ✅ fits inside 70px navbar */
-  width: auto;
-  filter: brightness(0) invert(1);
+/* ✅ Logo Section */
+.logo-section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.logo-section img {
+  height: 30px;
+  padding: 10px 20px;
+  position: relative;
+  top: 10px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0) invert(1); /* makes dark logos white */
+  transition: height 0.3s ease;   /* smooth resizing */
+}
 
 /* Navigation Links */
 .freelancer-work-section {
@@ -45,15 +54,12 @@
 }
 .login-btn,
 .signup-btn {
-  padding: 0.7rem;
-  background: rgba(54, 219, 89, 0.8);
+  padding: 0.6rem 1rem;
   border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1 rem;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 0.5rem;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .login-btn {
@@ -79,26 +85,26 @@
 /* Hamburger */
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
+  user-select: none;
 }
 
-/* ✅ Responsive */
+/* ✅ Tablet */
 @media (max-width: 1024px) {
   .logo-section img {
-    height: 125px;
+    height: 45px;
   }
 }
+
+/* ✅ Mobile Nav */
 @media (max-width: 768px) {
-    .logo-section img {
-    height: 120px;
-  }
   .freelancer-work-section {
     display: none;
     flex-direction: column;
     background: #222;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     padding: 15px 0;
@@ -114,20 +120,19 @@
     display: block;
   }
 }
+
+/* ✅ Small Mobile */
 @media (max-width: 600px) {
   .logo-section img {
-    height: 80px;
+    height: 40px;
   }
-  .signup-btn{
-    height: 30px;
-    text-align: center;
-       display: flex;
-    align-items: center;
-  }
-  .login-btn{
-    height: 30px;
-    text-align: center;
+  .login-btn,
+  .signup-btn {
+    height: 34px;
+    font-size: 0.9rem;
+    padding: 0 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
